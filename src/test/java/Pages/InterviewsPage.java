@@ -77,16 +77,13 @@ public class InterviewsPage extends BasePage {
         oldNameInterviews.click();
         wait.until(ExpectedConditions.elementToBeClickable(nameInterview));
         nameInterview.clear();
-        nameInterview.sendKeys(name != null ? name : "");
-        linkInterview.clear();
-        linkInterview.sendKeys(link != null ? link : "");
-        typeInterview.clear();
+        nameInterview.sendKeys(name);
+        linkInterview.sendKeys(link);
         select = new Select(typeInterview);
-        select.selectByValue(type != null ? type : "");
-        evaluationInterview.clear();
-        evaluationInterview.sendKeys(evaluation  != null ? evaluation : "");
+        select.selectByValue(type);
+        evaluationInterview.sendKeys(evaluation );
         dateInterview.clear();
-        dateInterview.sendKeys(date != null ? date : "");
+        dateInterview.sendKeys(date);
         successButton.click();
     }
 }

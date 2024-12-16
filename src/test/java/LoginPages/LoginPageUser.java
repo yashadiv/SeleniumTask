@@ -17,7 +17,7 @@ public class LoginPageUser extends BasePage {
     private WebElement loginButton;
 
     public LoginPageUser(){
-        this.driver.get("https://aqa-admin.javacode.ru/login");
+        driver.get("https://aqa.javacode.ru/main");
         PageFactory.initElements(driver,this);
     }
 

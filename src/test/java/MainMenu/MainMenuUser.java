@@ -1,7 +1,7 @@
 package MainMenu;
 
 import Bases.BasePage;
-import Pages.VoiceRecrodPage;
+import Pages.VoiceRecordPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,8 +14,8 @@ public class MainMenuUser extends BasePage {
         PageFactory.initElements(driver,this);
     }
 
-    public VoiceRecrodPage clickLinkCourses(){
+    public VoiceRecordPage clickLinkCourses(){
         courses.click();
-        return new VoiceRecrodPage();
+        return new VoiceRecordPage();
     }
 }

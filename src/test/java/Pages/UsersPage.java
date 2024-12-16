@@ -57,14 +57,14 @@ public class UsersPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(buttonAdd));
         buttonAdd.click();
         wait.until(ExpectedConditions.elementToBeClickable(inputFirstName));
-        inputFirstName.sendKeys(firstName!=null?firstName:"");
-        inputSurname.sendKeys(surname!=null?surname:"");
-        inputEmail.sendKeys(email!=null?email:"");
-        inputLogin.sendKeys(login!=null?login:"");
-        inputPassword.sendKeys(password!=null?password:"");
-        inputRoles.sendKeys(role!=null?role:"");
-        inputIsCV.sendKeys(isCV!=null?isCV:"");
-        inputCalendar.sendKeys(calendar!=null?calendar:"");
+        inputFirstName.sendKeys(firstName);
+        inputSurname.sendKeys(surname);
+        inputEmail.sendKeys(email);
+        inputLogin.sendKeys(login);
+        inputPassword.sendKeys(password);
+        inputRoles.sendKeys(role);
+        inputIsCV.sendKeys(isCV);
+        inputCalendar.sendKeys(calendar);
         switch (status) {
             case "active_search" -> buttonStatusSearch.click();
             case "on_project" -> buttonStatusProject.click();

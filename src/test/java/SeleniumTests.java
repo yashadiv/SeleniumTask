@@ -1,13 +1,12 @@
 import Bases.BaseTestPage;
 import LoginPages.LoginPageAdmin;
+import LoginPages.LoginPageUser;
 import Pages.*;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.testng.annotations.AfterMethod;
 
 //datafacker для создания пользователя
 public class SeleniumTests extends BaseTestPage {
@@ -122,6 +121,16 @@ public class SeleniumTests extends BaseTestPage {
         examPage.createdExam("NewTestExam","1002");
 
         Assert.assertEquals(examPage.getNameExam("NewTestExam"),"NewTestExam");
+    }
+
+    @Test
+    public void testCreatedVoiceRecord() throws InterruptedException {
+        LoginPageUser loginPageUser = new LoginPageUser();
+        VoiceRecordPage voiceRecrodPage = loginPageUser
+                .enterProfile(login,password)
+                .clickLinkCourses();
+        voiceRecrodPage.createdVoiceRecord();
+        Assert.assertEquals(voiceRecrodPage.checkRecord(),"Завершить запись");
     }
 
 }
